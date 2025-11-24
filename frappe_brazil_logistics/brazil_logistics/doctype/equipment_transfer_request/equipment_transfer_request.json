@@ -1,0 +1,171 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-24 10:31:16.757378",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "transfer_type",
+  "freight_type",
+  "carrier_protocol",
+  "column_break_xtls",
+  "carrier",
+  "carrier_tracking_number",
+  "contact_info_section",
+  "accountable",
+  "document",
+  "column_break_vlyp",
+  "phone",
+  "email",
+  "invoices_section",
+  "table_rmck",
+  "pickup_address_section",
+  "zip__postal_code",
+  "address_number",
+  "address_line_2",
+  "column_break_bfwi",
+  "state",
+  "city",
+  "address_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "transfer_type",
+   "fieldtype": "Select",
+   "label": "Transfer Type",
+   "options": "Entrada\nSaida"
+  },
+  {
+   "fieldname": "freight_type",
+   "fieldtype": "Select",
+   "label": "Freight Type",
+   "options": "\nCIF\nFOB\nConsignado"
+  },
+  {
+   "fieldname": "carrier_protocol",
+   "fieldtype": "Data",
+   "label": "Carrier Protocol"
+  },
+  {
+   "fieldname": "column_break_xtls",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "carrier",
+   "fieldtype": "Link",
+   "label": "Carrier",
+   "options": "Carrier"
+  },
+  {
+   "fieldname": "carrier_tracking_number",
+   "fieldtype": "Data",
+   "label": "Carrier Tracking Number"
+  },
+  {
+   "fieldname": "contact_info_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Info"
+  },
+  {
+   "fieldname": "accountable",
+   "fieldtype": "Data",
+   "label": "Accountable"
+  },
+  {
+   "fieldname": "document",
+   "fieldtype": "Data",
+   "label": "Document"
+  },
+  {
+   "fieldname": "column_break_vlyp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "E-Mail"
+  },
+  {
+   "fieldname": "pickup_address_section",
+   "fieldtype": "Section Break",
+   "label": "Pickup Address"
+  },
+  {
+   "fieldname": "zip__postal_code",
+   "fieldtype": "Data",
+   "label": "ZIP / Postal Code"
+  },
+  {
+   "fieldname": "address_number",
+   "fieldtype": "Data",
+   "label": "Address Line 1"
+  },
+  {
+   "fieldname": "address_line_2",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "column_break_bfwi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "label": "State"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "address_type",
+   "fieldtype": "Select",
+   "label": "Address Type",
+   "options": "\nBilling\nShipping\nOffice\nPersonal\nPlant\nPostal\nShop\nSubsidiary\nWarehouse\nCurrent\nPermanent\nOther"
+  },
+  {
+   "fieldname": "invoices_section",
+   "fieldtype": "Section Break",
+   "label": "Invoices"
+  },
+  {
+   "fieldname": "table_rmck",
+   "fieldtype": "Table",
+   "options": "Invoice Table"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-24 10:52:27.125311",
+ "modified_by": "Administrator",
+ "module": "Brazil Logistics",
+ "name": "Equipment Transfer Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
