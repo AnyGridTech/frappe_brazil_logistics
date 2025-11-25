@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:CRR-{####}",
  "creation": "2025-11-24 10:14:59.373742",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -33,7 +34,9 @@
   {
    "fieldname": "cnpj",
    "fieldtype": "Data",
-   "label": "CNPJ"
+   "in_list_view": 1,
+   "label": "CNPJ",
+   "reqd": 1
   },
   {
    "fieldname": "email",
@@ -47,11 +50,13 @@
   {
    "fieldname": "company_name",
    "fieldtype": "Data",
-   "label": "Company Name"
+   "in_list_view": 1,
+   "label": "Company Name",
+   "reqd": 1
   },
   {
    "fieldname": "state_registration",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "label": "State Registration"
   },
   {
@@ -67,12 +72,15 @@
   {
    "fieldname": "cep",
    "fieldtype": "Data",
-   "label": "CEP"
+   "in_list_view": 1,
+   "label": "CEP",
+   "reqd": 1
   },
   {
    "fieldname": "address",
    "fieldtype": "Data",
-   "label": "Address Line 1"
+   "label": "Address Line 1",
+   "reqd": 1
   },
   {
    "fieldname": "address_number",
@@ -87,22 +95,26 @@
    "fieldname": "state",
    "fieldtype": "Select",
    "label": "State",
-   "options": "\nAC\nAL\nAP\nAM\nBA\nCE\nDF\nES\nGO\nMA\nMT\nMS\nMG\nPA\nPB\nPR\nPE\nPI\nRJ\nRN\nRS\nRO\nRR\nSC\nSP\nSE\nTO"
+   "options": "\nAC\nAL\nAP\nAM\nBA\nCE\nDF\nES\nGO\nMA\nMT\nMS\nMG\nPA\nPB\nPR\nPE\nPI\nRJ\nRN\nRS\nRO\nRR\nSC\nSP\nSE\nTO",
+   "reqd": 1
   },
   {
    "fieldname": "city",
    "fieldtype": "Data",
-   "label": "City"
+   "label": "City",
+   "reqd": 1
   },
   {
    "fieldname": "neighborhood",
    "fieldtype": "Data",
-   "label": "Neighborhood"
+   "label": "Neighborhood",
+   "reqd": 1
   },
   {
    "fieldname": "ibge",
    "fieldtype": "Data",
-   "label": "IBGE"
+   "label": "IBGE",
+   "reqd": 1
   },
   {
    "fieldname": "address_type",
@@ -113,16 +125,19 @@
   {
    "fieldname": "fantasy_name",
    "fieldtype": "Data",
-   "label": "Name"
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-25 14:24:30.142279",
+ "modified": "2025-11-25 18:04:09.741392",
  "modified_by": "Administrator",
  "module": "Brazil Logistics",
  "name": "Carrier",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

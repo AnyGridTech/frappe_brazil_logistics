@@ -107,4 +107,40 @@
       await processCEPLookup(frm);
     }
   });
+
+  // brazil_logistics/doctype/carrier/ts/index.ts
+  function setupCNPJField(frm) {
+    const cnpjField = frm.fields_dict["cnpj"];
+    if (cnpjField && cnpjField.$input) {
+      cnpjField.$input.on("keypress", function(e) {
+        if (e.keyCode === 8 || e.keyCode === 9 || e.keyCode === 27 || e.keyCode === 13 || e.keyCode === 46 || // Allow: Ctrl+A, Ctrl+C, Ctrl+V, Ctrl+X
+        e.keyCode === 65 && e.ctrlKey === true || e.keyCode === 67 && e.ctrlKey === true || e.keyCode === 86 && e.ctrlKey === true || e.keyCode === 88 && e.ctrlKey === true) {
+          return;
+        }
+        if (e.which < 48 || e.which > 57) {
+          e.preventDefault();
+        }
+      });
+      cnpjField.$input.on("paste", function() {
+        setTimeout(function() {
+          if (cnpjField.$input) {
+            const pastedValue = cnpjField.$input.val();
+            const cleanedValue = pastedValue.replace(/\D/g, "");
+            cnpjField.$input.val(cleanedValue);
+            frm.set_value("cnpj", cleanedValue);
+          }
+        }, 10);
+      });
+    }
+  }
+  frappe.ui.form.on("Carrier", {
+    onload: function(frm) {
+      setupCNPJField(frm);
+    },
+    cnpj: function(frm) {
+      if (!frm.doc.cnpj) return;
+      agt.utils.brazil.cnpj.format(frm, "cnpj");
+      agt.utils.brazil.cnpj.validate(frm, "cnpj");
+    }
+  });
 })();
