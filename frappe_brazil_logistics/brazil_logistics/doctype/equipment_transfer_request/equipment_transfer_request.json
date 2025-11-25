@@ -117,7 +117,8 @@
   {
    "fieldname": "state",
    "fieldtype": "Select",
-   "label": "State"
+   "label": "State",
+   "options": "\nAC\nAL\nAP\nAM\nBA\nCE\nDF\nES\nGO\nMA\nMT\nMS\nMG\nPA\nPB\nPR\nPE\nPI\nRJ\nRN\nRS\nRO\nRR\nSC\nSP\nSE\nTO"
   },
   {
    "fieldname": "city",
@@ -144,7 +145,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-24 10:52:27.125311",
+ "modified": "2025-11-25 14:22:45.169987",
  "modified_by": "Administrator",
  "module": "Brazil Logistics",
  "name": "Equipment Transfer Request",
