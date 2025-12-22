@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-24 10:48:38.160864",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "invoice_form",
+  "invoice_link",
+  "invoice_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "invoice_form",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Invoice Form",
+   "options": "Invoices"
+  },
+  {
+   "fetch_from": "invoice_form.invoice_link",
+   "fieldname": "invoice_link",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Invoice Link"
+  },
+  {
+   "fetch_from": "invoice_form.invoice_number",
+   "fieldname": "invoice_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Invoice Number"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-24 10:52:38.106887",
+ "modified_by": "Administrator",
+ "module": "Brazil Logistics",
+ "name": "Invoice Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

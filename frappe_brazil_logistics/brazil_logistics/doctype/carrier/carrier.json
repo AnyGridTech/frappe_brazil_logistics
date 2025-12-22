@@ -1,0 +1,161 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:CRR-{####}",
+ "creation": "2025-11-24 10:14:59.373742",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "info_section",
+  "fantasy_name",
+  "cnpj",
+  "email",
+  "column_break_qnii",
+  "company_name",
+  "state_registration",
+  "phone",
+  "address_section",
+  "cep",
+  "address",
+  "address_number",
+  "address_type",
+  "column_break_htqw",
+  "state",
+  "city",
+  "neighborhood",
+  "ibge"
+ ],
+ "fields": [
+  {
+   "fieldname": "info_section",
+   "fieldtype": "Section Break",
+   "label": "Info"
+  },
+  {
+   "fieldname": "cnpj",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "CNPJ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "E-Mail"
+  },
+  {
+   "fieldname": "column_break_qnii",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "state_registration",
+   "fieldtype": "Int",
+   "label": "State Registration"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "address_section",
+   "fieldtype": "Section Break",
+   "label": "Address"
+  },
+  {
+   "fieldname": "cep",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "CEP",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address Line 1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address_number",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "column_break_htqw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "label": "State",
+   "options": "\nAC\nAL\nAP\nAM\nBA\nCE\nDF\nES\nGO\nMA\nMT\nMS\nMG\nPA\nPB\nPR\nPE\nPI\nRJ\nRN\nRS\nRO\nRR\nSC\nSP\nSE\nTO",
+   "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "neighborhood",
+   "fieldtype": "Data",
+   "label": "Neighborhood",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ibge",
+   "fieldtype": "Data",
+   "label": "IBGE",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address_type",
+   "fieldtype": "Select",
+   "label": "Address Type",
+   "options": "\nBilling\nShipping\nOffice\nPersonal\nPlant\nPostal\nShop\nSubsidiary\nWarehouse\nCurrent\nPermanent\nOther"
+  },
+  {
+   "fieldname": "fantasy_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-25 18:04:09.741392",
+ "modified_by": "Administrator",
+ "module": "Brazil Logistics",
+ "name": "Carrier",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
